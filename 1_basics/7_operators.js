@@ -55,31 +55,31 @@ result = --number;
 console.log(result, number);
 
 /**
- * 숫자 타입이 아닌 타입에 +, - 사용하면 어떻게될까?
+ * 숫자 타입이 아닌 타입에 +, - 사용하면 어떻게될까? ->  number타입으로 변경가능
  */
 let sample = '99';
 
 console.log(+sample);
-console.log(typeof +sample);
+console.log(typeof +sample); // number로 출력
 
 console.log(sample);
-console.log(typeof sample);
+console.log(typeof sample); //원래 변수의 type이 변경된것은 아님
 
 sample = true;
-console.log(+sample);
-console.log(typeof +sample);
+console.log(+sample); // 1
+console.log(typeof +sample); // number
 
 sample = false;
-console.log(+sample);
-console.log(typeof +sample);
+console.log(+sample); // 0
+console.log(typeof +sample); // number
 
 sample = '안유진';
-// NaN -> Not a Number
+// NaN -> Not a Number : 숫자가 아니다
 console.log(+sample);
 
 sample = '99';
-console.log(-sample);
-console.log(typeof -sample);
+console.log(-sample); // -99
+console.log(typeof -sample); // number
 
 /**
  * 할당 연산자 (assignment operator)
@@ -109,22 +109,23 @@ console.log(number);
  * 2) 값과 타입의 비교
  */
 
-console.log(5 == 5);
-console.log(5 == '5');
-console.log(0 == '');
-console.log(true == 1);
-console.log(false == 0);
-console.log(true == '1');
-
-console.log(5 === 5);
-console.log(5 === '5');
-console.log(0 === '');
-console.log(true === 1);
-console.log(false === 0);
-console.log(true === '1');
+// 사용하지마
+console.log(5 == 5); // true
+console.log(5 == '5'); // true
+console.log(0 == ''); // true
+console.log(true == 1); // true
+console.log(false == 0); // true 
+console.log(true == '1'); // true
+// 무조건 === 로 사용
+console.log(5 === 5); // true 타입까지 비교
+console.log(5 === '5'); // false
+console.log(0 === ''); // false
+console.log(true === 1); // false
+console.log(false === 0); // false
+console.log(true === '1'); // false
 
 console.log('------------');
-
+// 사용하지마
 console.log(5 != 5);
 console.log(5 != '5');
 console.log(0 != '');
@@ -133,7 +134,7 @@ console.log(false != 0);
 console.log(true != '1');
 
 console.log('-------------')
-
+// 타입까지 비교해주기
 console.log(5 !== 5);
 console.log(5 !== '5');
 console.log(0 !== '');
@@ -188,7 +189,7 @@ console.log(10 < 1 || 20 > 2);
 console.log(10 < 1 || 20 < 2);
 
 /**
- * 단축평가 (short circuit evaluation)
+ * 단축평가 (short circuit evaluation) : 암기필수
  * 
  * &&를 사용했을때 좌측이 true면 우측 값 반환
  * &&를 사용했을때 좌측이 false면 좌측 값 반환
@@ -217,7 +218,7 @@ console.log(10 ** 3);
 let name;
 console.log(name);
 
-name = name ?? '코드팩토리';
+name = name ?? '코드팩토리'; //좌측값이 null이거나 undefined일 때 오른쪽 값을 반환해라
 console.log(name);
 
 name = name ?? '아이브';

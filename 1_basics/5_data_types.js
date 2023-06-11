@@ -52,7 +52,7 @@ console.log(ive);
  * Escaping Character
  * 1) newline -> \n
  * 2) tab -> \t
- * 3) 백슬래시를 스트링으로 표현하고싶다면 두번 입력하면된다.
+ * 3) 백슬래시(\)를 스트링으로 표현하고싶다면 두번 입력하면된다.
  */
 const iveYuJin = '아이브\n안유진'
 console.log(iveYuJin);
@@ -62,16 +62,16 @@ const backSlash = '아이브\\코드팩토리';
 console.log(backSlash);
 const smallQutoation = '아이브\'코드팩토리';
 console.log(smallQutoation);
-
+// 백틱(`)을 사용하면 입력한 값 그대로 똑같이 출력된다 = Template Literal의 특징
 const iveWonYoung2 = `아이브i '" / / / / / /
 장원영`;
 console.log(iveWonYoung2);
 
-console.log(typeof iveWonYoung2);
+console.log(typeof iveWonYoung2); //string 타입으로 출력
 
 const groupName = '아이브';
 console.log(groupName + ' 안유진');
-console.log(`${groupName} 안유진`);
+console.log(`${groupName} 안유진`); //  Template Literal활용 백틱내부에 중괄호 사용해 변수삽입가능
 console.log('-------------');
 
 /**
@@ -83,7 +83,7 @@ console.log(typeof isTrue);
 console.log(typeof isFalse);
 
 /**
- * undefined
+ * undefined - 값을 배정하지 않았을 때
  * 
  * 사용자가 직접 값을 초기화하지 않았을때
  * 지정되는 값이다.
@@ -103,7 +103,7 @@ console.log(typeof noInit);
  */
 let init = null;
 console.log(init);
-console.log(typeof init);
+console.log(typeof init); //object타입으로 나옴
 console.log('----------')
 
 /**
@@ -118,10 +118,10 @@ const test2 = '1';
 
 console.log(test1 === test2);
 
-const symbol1 = Symbol('1');
-const symbol2 = Symbol('1');
+const symbol1 = Symbol('1'); //유일무이한 값으로 변수에 들어가게됨
+const symbol2 = Symbol('1'); //object사용시 유용하게 사용할 수 있음 가-끔!
 
-console.log(symbol1 === symbol2);
+console.log(symbol1 === symbol2); // 따라서 false값이 출력됨
 
 /**
  * Object 타입
@@ -141,7 +141,7 @@ console.log(dictionary['red']);
 console.log(dictionary['orange']);
 console.log(dictionary['yellow']);
 
-console.log(typeof dictionary);
+console.log(typeof dictionary); //object
 
 /**
  * Array 타입
@@ -175,5 +175,5 @@ console.log(typeof iveMembersArray);
  * static typing -> 변수를 선언할때 어떤 타입의 변수를 선언할지 명시를한다.
  *                  C
  * dynamic typing -> 변수의 타입을 명시적으로 선언하지 않고 갑에의해 타입을 "추론"한다.
- * JS -> dynamic typing
+ * JS -> dynamic typing // 오른쪽의 값에 따라 타입이 지정된다
  */

@@ -23,10 +23,10 @@ console.log(_yuJin);
 /**
  * Naming Convention 2
  * 
- * 1) camelCase -> 대부분의 언어에서 많이 사용
+ * 1) camelCase -> 대부분의 언어에서 많이 사용, 첫번째 글자 소문자 다음문자부턴 대문자
  * 2) snake_case -> 파이썬같은 언어에서사용
- * 3) PascalCase -> C# 마이크로소프트 계열의 언어에서 사용함
+ * 3) PascalCase -> C# 마이크로소프트 계열의 언어에서 사용함, 첫번째 글자도 대문자
  */
-// 안유진
+// 안유진을 변수로 한다면?
 const anYuJin = '안유진';
 console.log(anYuJin);

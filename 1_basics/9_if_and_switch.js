@@ -2,7 +2,7 @@
  * If and Switch
  */
 let number = 5;
-
+//짝수인지 홀수인지
 if (number % 2 === 0) {
     console.log('number 변수는 짝수입니다.');
 } else {
