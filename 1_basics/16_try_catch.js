@@ -7,14 +7,15 @@
 function runner() {
     try {
         console.log('Hello');
-
-        // throw new Error('큰 문제가 생겼습니다!');
+            
+        // throw new Error('큰 문제가 생겼습니다!'); //새로운 에러객체 생성
 
         console.log('Code Factory');
     } catch (e) {
         console.log('---catch---');
         console.log(e);
     } finally {
+        //try에서 에러가 났든 안났는 실행됨, optional
         console.log('---finally---');
     }
 }

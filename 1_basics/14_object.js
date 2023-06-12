@@ -1,12 +1,12 @@
 /**
- * Object / 객체
+ * Object / 객체 중요⭐️⭐️⭐️⭐️⭐️
  */
 
 // key : value pair
 let yuJin = {
     name: '안유진',
     group: '아이브',
-    dance: function () {
+    dance: function () { //오브젝트 안에 함수 정의 : 메서드
         return `${this.name}이 춤을 춥니다.`;
     }
 };
@@ -28,10 +28,10 @@ const groupKey = 'group';
 const groupValue = '아이브';
 
 const yuJin2 = {
-    [nameKey]: nameValue,
+    [nameKey]: nameValue, // key에다 변수를 집어넣을 땐 []사용  
     [groupKey]: groupValue,
     dance: function(){
-        return `${this.name}이 춤을 춥니다.`;
+        return `${this.name}이 춤을 춥니다.`;//this:현재객체
     }
 }
 console.log(yuJin2);
@@ -40,8 +40,8 @@ console.log(yuJin2.dance());
 yuJin2['group'] = '코드팩토리';
 console.log(yuJin2);
 
-yuJin2['englishName'] = 'An Yu Jin';
-console.log(yuJin2);
+yuJin2['englishName'] = 'An Yu Jin'; // 존재하지 않는 key값을 넣을 경우
+console.log(yuJin2); //새로 생성된다
 
 delete yuJin2['englishName'];
 console.log(yuJin2);
@@ -58,25 +58,25 @@ const wonYoung = {
 }
 console.log(wonYoung);
 
-// wonYoung = {};
+// wonYoung = {}; //새로운 객체로 변경 불가능 const로 선언했으므로 1)설명
 
-wonYoung['group'] = '코드팩토리';
+wonYoung['group'] = '코드팩토리'; //2)의 설명
 console.log(wonYoung);
 
 /**
  * 모든 키값 다 가져오기
  */
-console.log(Object.keys(wonYoung));
+console.log(Object.keys(wonYoung)); //Object는 대문자로, key값들만
 
 /**
  * 모든 벨류값 다 가져오기
  */
-console.log(Object.values(wonYoung));
+console.log(Object.values(wonYoung)); //value값들만
 
 const name = '안유진';
-
+//새로 생긴 문법
 const yuJin3 = {
-    name: name,
-    name,
+    name: name, //name의 키값과 변수의 value값이 같을 경우 [동일]
+    name,// 하나로 선언할 수 있음 [동일]
 };
 console.log(yuJin3);
